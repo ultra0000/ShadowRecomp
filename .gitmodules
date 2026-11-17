@@ -39,7 +39,7 @@
 	url = https://github.com/renderbag/plume.git
 [submodule "ShadowRecompResources"]
 	path = ShadowRecompResources
-	url = https://github.com/FoxWorkshop/ShadowRecompResources
+	url = https://github.com/ultra0000/ShadowRecompResources
 [submodule "tools/XShaderRecomp"]
 	path = tools/XShaderRecomp
 	url = https://github.com/FoxWorkshop/XShaderRecomp
