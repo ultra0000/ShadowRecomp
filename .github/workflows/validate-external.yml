@@ -19,4 +19,3 @@ jobs:
     secrets: # explicitly define for external just incase
       ASSET_REPO: ${{ secrets.ASSET_REPO }}
       ASSET_REPO_TOKEN: ${{ secrets.ASSET_REPO_TOKEN }}
-      XBOXRECOMP2_TOKEN: ${{ secrets.XBOXRECOMP2_TOKEN }} # TODO: yeet before release

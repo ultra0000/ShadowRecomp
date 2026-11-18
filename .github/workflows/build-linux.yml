@@ -6,8 +6,6 @@ on:
         required: true
       ASSET_REPO_TOKEN:
         required: true
-      XBOXRECOMP2_TOKEN:
-        required: true
 
 jobs:
   build-linux:
@@ -83,10 +81,7 @@ jobs:
       - name: Prepare Project
         run: cp ./private/* ./ShadowRecompLib/private
 
-      # HACK: GH_TOKEN for private XboxRecomp2. REMOVE when public.
       - name: Configure Project
-        env:
-          GH_TOKEN: ${{ secrets.XBOXRECOMP2_TOKEN }}
         run: cmake . --preset ${{ env.CMAKE_PRESET }} -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_C_COMPILER_LAUNCHER=ccache -DSHADOW_RECOMP_XBOXRECOMP2=binary
 
       - name: Build Project

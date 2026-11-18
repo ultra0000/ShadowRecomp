@@ -6,8 +6,6 @@ on:
         required: true
       ASSET_REPO_TOKEN:
         required: true
-      XBOXRECOMP2_TOKEN: # TODO: yeet this before release
-        required: true
 
 jobs:
   build-flatpak:
@@ -63,10 +61,7 @@ jobs:
       - name: Prepare Project
         run: cp ./private/* ./ShadowRecompLib/private
 
-      # HACK: Flatpak can't log in to GitHub. REMOVE when XboxRecomp2 goes public.
       - name: Download XboxRecomp2
-        env:
-          GH_TOKEN: ${{ secrets.XBOXRECOMP2_TOKEN }}
         run: cmake -DVERSION=0.4.0 -DDESTINATION=out/xr2-bin -P ShadowRecompLib/cmake/recompile/select/download.cmake
 
       - name: Prepare Flatpak

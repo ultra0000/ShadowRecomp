@@ -7,8 +7,6 @@ on:
         required: true
       ASSET_REPO_TOKEN:
         required: true
-      XBOXRECOMP2_TOKEN:
-        required: true
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
